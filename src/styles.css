@@ -1050,6 +1050,10 @@ input[type="range"] {
   pointer-events: none;
 }
 
+.building-custom-art {
+  pointer-events: none;
+}
+
 .building-hit {
   fill: transparent;
 }
@@ -1361,6 +1365,20 @@ input[type="range"] {
   margin: 8px 0 0;
   color: var(--faint);
   font-size: 9px;
+}
+
+.building-graphic-status {
+  margin: 0 0 8px;
+  color: #9aa394;
+  font-size: 11px;
+}
+
+.building-graphic-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
 }
 
 .coordinate-label {

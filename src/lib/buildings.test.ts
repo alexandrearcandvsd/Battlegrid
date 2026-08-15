@@ -16,6 +16,8 @@ import {
   duplicateBuilding,
   moveBuilding,
   rotateBuilding,
+  applyBuildingImageToType,
+  setBuildingImage,
   setBuildingLabel,
   setBuildingState,
   stampBuilding,
@@ -292,5 +294,36 @@ describe('building commands', () => {
     expect(map.buildings[0].label).toBe('Relay One')
     map = setBuildingLabel(map, id, '   ')
     expect(map.buildings[0].label).toBeUndefined()
+  })
+
+  it('replaces a structure graphic and copies it onto new stamps of that type', () => {
+    const image =
+      'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg=='
+    let map = stampBuilding(openMap(), 'house', { col: 3, row: 3 })
+    const first = map.buildings[0].id
+    map = stampBuilding(map, 'house', { col: 6, row: 5 })
+    const second = map.buildings[1].id
+    map = setBuildingImage(map, first, image, true)
+    expect(map.buildings[0].image).toBe(image)
+    expect(map.buildings[1].image).toBeUndefined()
+    expect(map.buildingArt?.house).toBe(image)
+
+    map = applyBuildingImageToType(map, 'house', image)
+    expect(map.buildings[1].image).toBe(image)
+
+    const lot = map.cells.find((cell) => canPlaceBuilding(map, 'house', cell, 0))!
+    map = stampBuilding(map, 'house', { col: lot.col, row: lot.row })
+    expect(map.buildings[2].image).toBe(image)
+
+    const copy = duplicateBuilding(map, first)
+    expect(copy.buildings[3].image).toBe(image)
+
+    map = setBuildingImage(map, second, undefined)
+    expect(map.buildings[1].image).toBeUndefined()
+    expect(map.buildingArt?.house).toBe(image)
+
+    map = applyBuildingImageToType(map, 'house', undefined)
+    expect(map.buildings.every((building) => !building.image)).toBe(true)
+    expect(map.buildingArt?.house).toBeUndefined()
   })
 })

@@ -178,6 +178,9 @@ Each building contains:
 - `rotation` — 0 through 5, in 60° steps
 - `state` — `intact`, `lightlyDamaged`, `heavilyDamaged`, `burning`, `collapsed`, or `rubble` (`damaged` is still accepted and treated as heavily damaged)
 - Optional `label`
+- Optional `image` — a `data:image/png|jpeg|webp;base64,…` graphic that replaces the stock stamp. Invalid or remote URLs are stripped on import.
+
+Optional `buildingArt` on the map is a type → data-URL table used when stamping a new building of that type.
 
 Files saved before v0.3 omit `biome` and `generatorProfile`; they are imported
 as Temperate Grasslands automatically. Version-1 files gain an empty building

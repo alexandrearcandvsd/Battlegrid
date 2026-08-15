@@ -189,6 +189,7 @@ export function resizeMapPreservingCells(
         (cell) => cell.col >= 0 && cell.row >= 0 && cell.col < generated.width && cell.row < generated.height,
       ),
     ),
+    buildingArt: current.buildingArt,
   }
 }
 
@@ -214,6 +215,7 @@ export function regenerateUnprotectedCells(
     name: current.name,
     cells: generated.cells.map((cell) => protectedCells.get(keyOf(cell)) ?? cell),
     buildings: current.buildings,
+    buildingArt: current.buildingArt,
   }
 }
 

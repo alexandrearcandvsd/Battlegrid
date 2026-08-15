@@ -6,14 +6,17 @@ import { HexMap } from './components/HexMap'
 import { TerrainPalette } from './components/TerrainPalette'
 import { useMapHistory } from './hooks/useMapHistory'
 import {
+  applyBuildingImageToType,
   deleteBuilding,
   duplicateBuilding,
   moveBuilding,
   rotateBuilding,
+  setBuildingImage,
   setBuildingLabel,
   setBuildingState,
   stampBuilding,
 } from './lib/buildingCommands'
+import { readBuildingImage } from './lib/buildingImage'
 import { BUILDING_TYPES, buildingAt } from './lib/buildings'
 import type { BuildingType } from './types/building'
 import { downloadExportPdf, downloadExportPng, downloadExportSvg, printExport } from './lib/export'
@@ -786,6 +789,33 @@ function App() {
                 selectedBuildingId &&
                 commit((current) => setBuildingLabel(current, selectedBuildingId, label))
               }
+              onPickImage={(file) => {
+                const id = selectedBuildingId
+                if (!id) return
+                void readBuildingImage(file)
+                  .then((image) => {
+                    commit((current) => setBuildingImage(current, id, image, true))
+                    setNotice('Structure graphic replaced')
+                  })
+                  .catch((error: unknown) => {
+                    setNotice(error instanceof Error ? error.message : 'Could not read the image')
+                  })
+              }}
+              onClearImage={() =>
+                selectedBuildingId &&
+                commit((current) => setBuildingImage(current, selectedBuildingId, undefined))
+              }
+              onApplyImageToType={() => {
+                if (!selectedBuilding) return
+                commit((current) =>
+                  applyBuildingImageToType(current, selectedBuilding.type, selectedBuilding.image),
+                )
+                setNotice(
+                  selectedBuilding.image
+                    ? `Graphic applied to every ${BUILDING_TYPES[selectedBuilding.type].label}`
+                    : `Default stamp restored for every ${BUILDING_TYPES[selectedBuilding.type].label}`,
+                )
+              }}
               onDeselect={() => setSelectedBuildingId(null)}
             />
           )}

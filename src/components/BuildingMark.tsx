@@ -1186,6 +1186,9 @@ function BuildingView({
   const roof = shade(roofFill(building.type), wrecked || state === 'lightlyDamaged' ? -0.28 : 0)
   const { cx, cy, w, h, angle } = buildingShape(building)
   const depth = wallDepth(building.type)
+  const customArt = building.image
+  const artHeight = flattened ? h * 0.55 : h
+  const clipId = `building-art-${building.id}`
   return (
     <g
       className={`building building-${building.type} ${building.state} ${selected ? 'selected' : ''}`}
@@ -1203,7 +1206,34 @@ function BuildingView({
           height={h}
           rx={2}
         />
-        {flattened ? (
+        {customArt ? (
+          <g>
+            <rect
+              className="building-plate"
+              x={-w / 2}
+              y={-h / 2}
+              width={w}
+              height={artHeight}
+              style={{ fill: shade(roof, flattened ? -0.22 : -0.18) }}
+            />
+            <defs>
+              <clipPath id={clipId}>
+                <rect x={-w / 2} y={-h / 2} width={w} height={artHeight} />
+              </clipPath>
+            </defs>
+            <image
+              className="building-custom-art"
+              href={customArt}
+              x={-w / 2}
+              y={-h / 2}
+              width={w}
+              height={artHeight}
+              preserveAspectRatio="xMidYMid slice"
+              clipPath={`url(#${clipId})`}
+              opacity={wrecked ? 0.88 : 1}
+            />
+          </g>
+        ) : flattened ? (
           <rect
             className="building-plate"
             x={-w / 2}

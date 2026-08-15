@@ -586,6 +586,51 @@ describe('HexMap brush preview', () => {
     expect(container.querySelectorAll('.building.damaged .building-detail')).toHaveLength(0)
   })
 
+  it('draws a custom building graphic instead of the stock stamp', () => {
+    const image =
+      'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg=='
+    const generated = generateMap({
+      biome: 'temperate-grasslands',
+      width: 6,
+      height: 6,
+      seed: 'CUSTOM-ART',
+      terrain: { woods: 0, water: 0, rough: 0 },
+      elevation: 0,
+      symmetric: false,
+      river: false,
+    })
+    const map = {
+      ...generated,
+      buildings: [
+        {
+          id: 'custom-house',
+          type: 'house' as const,
+          anchor: { col: 2, row: 2 },
+          rotation: 0 as const,
+          state: 'intact' as const,
+          image,
+        },
+      ],
+    }
+    const { container } = render(
+      <HexMap
+        map={map}
+        svgRef={createRef<SVGSVGElement>()}
+        resetToken={0}
+        onPaint={vi.fn()}
+        allowDragPaint
+        showGrid
+        showCoordinates={false}
+        showElevationLabels={false}
+        highlightRadius={0}
+      />,
+    )
+    const art = container.querySelector('.building-custom-art')
+    expect(art).not.toBeNull()
+    expect(art?.getAttribute('href')).toBe(image)
+    expect(container.querySelectorAll('.house-chimney')).toHaveLength(0)
+  })
+
   it('keeps a rotated apartment the same local size as the unrotated one', () => {
     const generated = generateMap({
       biome: 'temperate-grasslands',

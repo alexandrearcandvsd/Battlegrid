@@ -170,7 +170,7 @@ Stamp buildings from the **Structures** panel, grouped:
 - Military — hangars, bunkers, HPG, Castle Brian, Star League bunker, …
 - Infrastructure — bridge, rail, dam, substation, water tower, …
 
-Each stamp has footprint, 60° rotation, height, construction type, construction factor (CF), entrances, and an optional label.
+Each stamp has footprint, 60° rotation, height, construction type, construction factor (CF), entrances, and an optional label. Select a stamp to replace its graphic with a PNG, JPEG, or WebP; **Use for every…** copies that image onto the rest of the type.
 
 `R` rotate · `D` duplicate · Delete remove · arrows nudge one hex
 

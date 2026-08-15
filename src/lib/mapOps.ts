@@ -90,5 +90,6 @@ export function expandMap(
       col: note.col + shiftCol,
       row: note.row + shiftRow,
     })),
+    buildingArt: map.buildingArt,
   }
 }

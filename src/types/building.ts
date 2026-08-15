@@ -116,4 +116,6 @@ export interface Building {
   rotation: BuildingRotation
   state: BuildingState
   label?: string
+  /** Embedded data-URL graphic; paint only. CF, height, and footprint stay. */
+  image?: string
 }

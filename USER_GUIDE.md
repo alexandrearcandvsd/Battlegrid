@@ -23,7 +23,7 @@ The **Terrain** panel splits **Tools**, **Marks**, and **Elevation** into sub-ta
 - **Path** paints a contiguous hex line as you drag — use it for roads and rivers instead of filling hexes one at a time.
 - **Fill region** floods a contiguous terrain patch.
 - **Select** and **Lasso** copy, cut, crop, protect, or clear a region.
-- Stamp structures from the **Structures** panel (grouped by civilian, industrial, military, and infrastructure). Arrow keys nudge a selected building; `R` rotates, `D` duplicates, Delete removes it.
+- Stamp structures from the **Structures** panel (grouped by civilian, industrial, military, and infrastructure). Arrow keys nudge a selected building; `R` rotates, `D` duplicates, Delete removes it. Select a stamp and use **Replace graphic** to drop in a PNG, JPEG, or WebP; the image is clipped to the stamp, stored in the map file, and **Use for every…** copies it onto the rest of that type.
 - Click the hex map (or Tab to it) and use arrow keys to move a hex cursor. Enter or Space paints the focused hex. Number keys 1–7 pick terrain types.
 
 Feature marks include crater, scree, ice, crevasse, dry wash, canopy gap, beach, cliff, wall, reef, **spore field**, and **crystal**. Clicking a marked hex again clears it.

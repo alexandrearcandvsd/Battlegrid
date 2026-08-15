@@ -157,6 +157,10 @@ Every building definition should support:
 
 ## Visual states
 
+Each placed building can optionally replace the stock stamp with a custom
+image (PNG, JPEG, or WebP). Construction factor, height, and footprint stay
+the same; damage overlays still draw on top.
+
 Each building should provide:
 
 - Intact

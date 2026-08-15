@@ -1,5 +1,5 @@
 import type { BiomeId } from './biome'
-import type { Building } from './building'
+import type { Building, BuildingType } from './building'
 
 export const TERRAIN_TYPES = [
   'clear',
@@ -119,6 +119,8 @@ export interface BattleMap {
   cells: HexCell[]
   buildings: Building[]
   annotations: Annotation[]
+  /** Default custom graphic for newly stamped buildings of that type. */
+  buildingArt?: Partial<Record<BuildingType, string>>
   updatedAt: string
 }
 

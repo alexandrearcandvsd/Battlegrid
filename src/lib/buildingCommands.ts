@@ -13,14 +13,35 @@ export function stampBuilding(
   anchor: { col: number; row: number },
 ): BattleMap {
   if (!canPlaceBuilding(map, type, anchor, 0)) return map
+  const image = map.buildingArt?.[type]
   const building: Building = {
     id: crypto.randomUUID(),
     type,
     anchor,
     rotation: 0,
     state: 'intact',
+    ...(image ? { image } : {}),
   }
   return { ...map, buildings: [...map.buildings, building] }
+}
+
+function withoutImage(building: Building): Building {
+  if (!building.image) return building
+  const { image: _image, ...rest } = building
+  return rest
+}
+
+function withBuildingArt(
+  map: BattleMap,
+  type: BuildingType,
+  image: string | undefined,
+): BattleMap {
+  if (map.buildingArt?.[type] === image) return map
+  const buildingArt = { ...map.buildingArt }
+  if (image) buildingArt[type] = image
+  else delete buildingArt[type]
+  const nextArt = Object.keys(buildingArt).length > 0 ? buildingArt : undefined
+  return { ...map, buildingArt: nextArt }
 }
 
 function updateBuilding(
@@ -90,6 +111,38 @@ export function setBuildingLabel(map: BattleMap, id: string, label: string): Bat
     ...building,
     label: label.trim() || undefined,
   }))
+}
+
+export function setBuildingImage(
+  map: BattleMap,
+  id: string,
+  image: string | undefined,
+  asTypeDefault = false,
+): BattleMap {
+  const next = updateBuilding(map, id, (building) => {
+    if (building.image === image || (!building.image && !image)) return building
+    return image ? { ...building, image } : withoutImage(building)
+  })
+  if (!asTypeDefault) return next
+  const building = next.buildings.find((entry) => entry.id === id)
+  if (!building || !image) return next
+  return withBuildingArt(next, building.type, image)
+}
+
+export function applyBuildingImageToType(
+  map: BattleMap,
+  type: BuildingType,
+  image: string | undefined,
+): BattleMap {
+  let changed = false
+  const buildings = map.buildings.map((building) => {
+    if (building.type !== type) return building
+    if (building.image === image || (!building.image && !image)) return building
+    changed = true
+    return image ? { ...building, image } : withoutImage(building)
+  })
+  const withBuildings = changed ? { ...map, buildings } : map
+  return withBuildingArt(withBuildings, type, image)
 }
 
 export { buildingCells }

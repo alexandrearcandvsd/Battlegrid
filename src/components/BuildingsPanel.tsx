@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import { BUILDING_TYPES, BUILDING_TYPE_IDS } from '../lib/buildings'
 import {
   BUILDING_STATES,
@@ -18,6 +19,9 @@ interface Props {
   onDelete: () => void
   onStateChange: (state: Building['state']) => void
   onLabelChange: (label: string) => void
+  onPickImage: (file: File) => void
+  onClearImage: () => void
+  onApplyImageToType: () => void
   onDeselect: () => void
 }
 
@@ -31,8 +35,12 @@ export function BuildingsPanel({
   onDelete,
   onStateChange,
   onLabelChange,
+  onPickImage,
+  onClearImage,
+  onApplyImageToType,
   onDeselect,
 }: Props) {
+  const fileInputRef = useRef<HTMLInputElement>(null)
   const selectedDefinition = selected ? BUILDING_TYPES[selected.type] : null
   const categories: BuildingCategory[] = ['civilian', 'industrial', 'military', 'infrastructure']
   const categoryLabels: Record<BuildingCategory, string> = {
@@ -98,6 +106,34 @@ export function BuildingsPanel({
               if (event.key === 'Enter') event.currentTarget.blur()
             }}
           />
+          <span className="field-label">Graphic</span>
+          <p className="building-graphic-status">
+            {selected.image ? 'Custom image' : 'Default stamp'}
+          </p>
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="image/png,image/jpeg,image/webp"
+            className="building-graphic-input"
+            aria-label="Choose a building graphic file"
+            onChange={(event) => {
+              const file = event.target.files?.[0]
+              event.target.value = ''
+              if (file) onPickImage(file)
+            }}
+          />
+          <div className="segmented">
+            <button type="button" onClick={() => fileInputRef.current?.click()}>
+              Replace graphic
+            </button>
+            <button type="button" onClick={onClearImage} disabled={!selected.image}>
+              Restore default
+            </button>
+          </div>
+          <button type="button" className="protection-button" onClick={onApplyImageToType}>
+            Use for every {selectedDefinition.label}
+          </button>
+          <p className="building-note">PNG, JPEG, or WebP. Clipped to the stamp and stored in the map file.</p>
           <div className="segmented">
             <button onClick={onRotate} title="Rotate 60° (R)">
               Rotate

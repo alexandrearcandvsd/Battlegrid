@@ -115,6 +115,14 @@ describe('map editing commands', () => {
       before.terrain,
     )
     expect(merged.buildings).toHaveLength(1)
+    const withArt = {
+      ...map,
+      buildingArt: {
+        house:
+          'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==',
+      },
+    }
+    expect(regenerateUnprotectedCells(withArt, flooded).buildingArt).toEqual(withArt.buildingArt)
   })
 
   it('drops buildings that fall outside the resized bounds', () => {

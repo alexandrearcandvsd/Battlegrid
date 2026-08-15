@@ -13,23 +13,25 @@ const selected: Building = {
   state: 'intact',
 }
 
+const unused = {
+  onArm: vi.fn(),
+  onRotate: vi.fn(),
+  onDuplicate: vi.fn(),
+  onDelete: vi.fn(),
+  onStateChange: vi.fn(),
+  onLabelChange: vi.fn(),
+  onPickImage: vi.fn(),
+  onClearImage: vi.fn(),
+  onApplyImageToType: vi.fn(),
+  onDeselect: vi.fn(),
+}
+
 afterEach(cleanup)
 
 describe('BuildingsPanel', () => {
   it('lists the new table structures', () => {
     render(
-      <BuildingsPanel
-        armed={null}
-        onArm={vi.fn()}
-        selected={null}
-        placedCount={0}
-        onRotate={vi.fn()}
-        onDuplicate={vi.fn()}
-        onDelete={vi.fn()}
-        onStateChange={vi.fn()}
-        onLabelChange={vi.fn()}
-        onDeselect={vi.fn()}
-      />,
+      <BuildingsPanel armed={null} selected={null} placedCount={0} {...unused} />,
     )
     expect(screen.getByRole('button', { name: /Hospital/ })).toBeTruthy()
     expect(screen.getByRole('button', { name: /Government/ })).toBeTruthy()
@@ -50,15 +52,10 @@ describe('BuildingsPanel', () => {
     render(
       <BuildingsPanel
         armed={null}
-        onArm={vi.fn()}
         selected={selected}
         placedCount={1}
-        onRotate={vi.fn()}
-        onDuplicate={vi.fn()}
-        onDelete={vi.fn()}
+        {...unused}
         onStateChange={onStateChange}
-        onLabelChange={vi.fn()}
-        onDeselect={vi.fn()}
       />,
     )
     expect(screen.getByText(/Medium/)).toBeTruthy()
@@ -69,5 +66,48 @@ describe('BuildingsPanel', () => {
     expect(screen.getByRole('button', { name: 'Lightly damaged' })).toBeTruthy()
     expect(screen.getByRole('button', { name: 'Collapsed' })).toBeTruthy()
     expect(screen.getByRole('button', { name: 'Rubble' })).toBeTruthy()
+  })
+
+  it('lets the selected structure replace its graphic', () => {
+    const onPickImage = vi.fn()
+    const onClearImage = vi.fn()
+    const onApplyImageToType = vi.fn()
+    const { rerender } = render(
+      <BuildingsPanel
+        armed={null}
+        selected={selected}
+        placedCount={1}
+        {...unused}
+        onPickImage={onPickImage}
+        onClearImage={onClearImage}
+        onApplyImageToType={onApplyImageToType}
+      />,
+    )
+    expect(screen.getByText('Default stamp')).toBeTruthy()
+    expect((screen.getByRole('button', { name: 'Restore default' }) as HTMLButtonElement).disabled).toBe(
+      true,
+    )
+    const file = new File(['x'], 'hospital.png', { type: 'image/png' })
+    fireEvent.change(screen.getByLabelText('Choose a building graphic file'), {
+      target: { files: [file] },
+    })
+    expect(onPickImage).toHaveBeenCalledWith(file)
+
+    rerender(
+      <BuildingsPanel
+        armed={null}
+        selected={{ ...selected, image: 'data:image/png;base64,aaa' }}
+        placedCount={1}
+        {...unused}
+        onPickImage={onPickImage}
+        onClearImage={onClearImage}
+        onApplyImageToType={onApplyImageToType}
+      />,
+    )
+    expect(screen.getByText('Custom image')).toBeTruthy()
+    fireEvent.click(screen.getByRole('button', { name: 'Restore default' }))
+    expect(onClearImage).toHaveBeenCalled()
+    fireEvent.click(screen.getByRole('button', { name: 'Use for every Hospital' }))
+    expect(onApplyImageToType).toHaveBeenCalled()
   })
 })

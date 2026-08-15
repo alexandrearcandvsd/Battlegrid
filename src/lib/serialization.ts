@@ -4,9 +4,10 @@ import {
   TERRAIN_TYPES,
   type BattleMap,
 } from '../types/map'
-import type { Building } from '../types/building'
+import type { Building, BuildingType } from '../types/building'
 import type { Annotation } from '../types/map'
 import { DEFAULT_BIOME_ID, isBiomeId } from './biomes'
+import { isBuildingImageDataUrl } from './buildingImage'
 import { isBuildingState, isBuildingType } from './buildings'
 import { isColorway } from './colorways'
 import { isVariantId } from './variants'
@@ -64,6 +65,27 @@ function isValidBuilding(
   return true
 }
 
+function parseBuildingArt(
+  raw: unknown,
+  warnings: string[],
+): Partial<Record<BuildingType, string>> | undefined {
+  if (raw === undefined) return undefined
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) {
+    warnings.push('Dropped unreadable building graphics')
+    return undefined
+  }
+  const next: Partial<Record<BuildingType, string>> = {}
+  for (const [type, value] of Object.entries(raw as Record<string, unknown>)) {
+    if (!isBuildingType(type)) {
+      warnings.push(`Dropped a graphic for unknown structure type "${type}"`)
+      continue
+    }
+    if (isBuildingImageDataUrl(value)) next[type] = value
+    else warnings.push(`Dropped an invalid graphic for ${type}`)
+  }
+  return Object.keys(next).length > 0 ? next : undefined
+}
+
 function isValidAnnotation(
   note: Partial<Annotation>,
   width: number,
@@ -117,7 +139,15 @@ export function parseMapWithWarnings(value: string): { map: BattleMap; warnings:
   for (const entry of sourceBuildings as Partial<Building>[]) {
     if (isValidBuilding(entry, raw.width, raw.height, seenBuildingIds)) {
       seenBuildingIds.add(entry.id)
-      buildings.push(entry)
+      if (entry.image === undefined) {
+        buildings.push(entry)
+      } else if (isBuildingImageDataUrl(entry.image)) {
+        buildings.push(entry)
+      } else {
+        const { image: _image, ...rest } = entry
+        buildings.push(rest)
+        warnings.push('Dropped an invalid building graphic')
+      }
     } else {
       warnings.push('Dropped an invalid or duplicate building')
     }
@@ -187,6 +217,10 @@ export function parseMapWithWarnings(value: string): { map: BattleMap; warnings:
   } as BattleMap
   if (colorway) parsed.colorway = colorway
   else delete parsed.colorway
+
+  const buildingArt = parseBuildingArt(raw.buildingArt, warnings)
+  if (buildingArt) parsed.buildingArt = buildingArt
+  else delete parsed.buildingArt
 
   return {
     warnings,

@@ -46,6 +46,50 @@ describe('map serialization', () => {
     expect(parsed.biome).toBe('temperate-grasslands')
   })
 
+  it('round-trips a custom building graphic and type default', () => {
+    const image =
+      'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg=='
+    const withArt = {
+      ...map,
+      buildingArt: { house: image },
+      buildings: [
+        {
+          id: 'bldg-art',
+          type: 'house' as const,
+          anchor: { col: 2, row: 2 },
+          rotation: 0 as const,
+          state: 'intact' as const,
+          image,
+        },
+      ],
+    }
+    expect(parseMap(serializeMap(withArt))).toEqual(withArt)
+  })
+
+  it('keeps a building when its graphic is invalid', () => {
+    const parsed = parseMapWithWarnings(
+      JSON.stringify({
+        ...map,
+        buildingArt: { house: 'javascript:alert(1)', castle: 'data:image/png;base64,AAAA' },
+        buildings: [
+          {
+            id: 'ok',
+            type: 'house',
+            anchor: { col: 1, row: 1 },
+            rotation: 0,
+            state: 'intact',
+            image: 'https://example.test/house.png',
+          },
+        ],
+      }),
+    )
+    expect(parsed.map.buildings).toEqual([
+      { id: 'ok', type: 'house', anchor: { col: 1, row: 1 }, rotation: 0, state: 'intact' },
+    ])
+    expect(parsed.map.buildingArt).toBeUndefined()
+    expect(parsed.warnings.some((warning) => /graphic/i.test(warning))).toBe(true)
+  })
+
   it('round-trips buildings through v2 files', () => {
     const withBuilding = {
       ...map,
