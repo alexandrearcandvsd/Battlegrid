@@ -1,0 +1,1811 @@
+{
+  "version": 2,
+  "name": "SAMPLE-BASE",
+  "width": 16,
+  "height": 17,
+  "seed": "SAMPLE-BASE",
+  "biome": "urban",
+  "generatorProfile": {
+    "woods": 10,
+    "water": 6,
+    "rough": 8,
+    "elevation": 1,
+    "symmetric": true,
+    "river": false,
+    "roadChance": 100
+  },
+  "cells": [
+    {
+      "col": 0,
+      "row": 0,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 1,
+      "row": 0,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 2,
+      "row": 0,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 3,
+      "row": 0,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 4,
+      "row": 0,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 5,
+      "row": 0,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 6,
+      "row": 0,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 7,
+      "row": 0,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 8,
+      "row": 0,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 9,
+      "row": 0,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 10,
+      "row": 0,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 11,
+      "row": 0,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 12,
+      "row": 0,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 13,
+      "row": 0,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 14,
+      "row": 0,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 15,
+      "row": 0,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 0,
+      "row": 1,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 1,
+      "row": 1,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 2,
+      "row": 1,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 3,
+      "row": 1,
+      "terrain": "clear",
+      "elevation": 0,
+      "feature": "wall"
+    },
+    {
+      "col": 4,
+      "row": 1,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 5,
+      "row": 1,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 6,
+      "row": 1,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 7,
+      "row": 1,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 8,
+      "row": 1,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 9,
+      "row": 1,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 10,
+      "row": 1,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 11,
+      "row": 1,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 12,
+      "row": 1,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 13,
+      "row": 1,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 14,
+      "row": 1,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 15,
+      "row": 1,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 0,
+      "row": 2,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 1,
+      "row": 2,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 2,
+      "row": 2,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 3,
+      "row": 2,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 4,
+      "row": 2,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 5,
+      "row": 2,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 6,
+      "row": 2,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 7,
+      "row": 2,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 8,
+      "row": 2,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 9,
+      "row": 2,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 10,
+      "row": 2,
+      "terrain": "clear",
+      "elevation": 0,
+      "feature": "wall"
+    },
+    {
+      "col": 11,
+      "row": 2,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 12,
+      "row": 2,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 13,
+      "row": 2,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 14,
+      "row": 2,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 15,
+      "row": 2,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 0,
+      "row": 3,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 1,
+      "row": 3,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 2,
+      "row": 3,
+      "terrain": "rough",
+      "elevation": 1
+    },
+    {
+      "col": 3,
+      "row": 3,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 4,
+      "row": 3,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 5,
+      "row": 3,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 6,
+      "row": 3,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 7,
+      "row": 3,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 8,
+      "row": 3,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 9,
+      "row": 3,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 10,
+      "row": 3,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 11,
+      "row": 3,
+      "terrain": "clear",
+      "elevation": 0,
+      "feature": "wall"
+    },
+    {
+      "col": 12,
+      "row": 3,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 13,
+      "row": 3,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 14,
+      "row": 3,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 15,
+      "row": 3,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 0,
+      "row": 4,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 1,
+      "row": 4,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 2,
+      "row": 4,
+      "terrain": "rough",
+      "elevation": 1
+    },
+    {
+      "col": 3,
+      "row": 4,
+      "terrain": "rough",
+      "elevation": 2
+    },
+    {
+      "col": 4,
+      "row": 4,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 5,
+      "row": 4,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 6,
+      "row": 4,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 7,
+      "row": 4,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 8,
+      "row": 4,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 9,
+      "row": 4,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 10,
+      "row": 4,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 11,
+      "row": 4,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 12,
+      "row": 4,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 13,
+      "row": 4,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 14,
+      "row": 4,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 15,
+      "row": 4,
+      "terrain": "clear",
+      "elevation": 0,
+      "feature": "wall"
+    },
+    {
+      "col": 0,
+      "row": 5,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 1,
+      "row": 5,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 2,
+      "row": 5,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 3,
+      "row": 5,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 4,
+      "row": 5,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 5,
+      "row": 5,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 6,
+      "row": 5,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 7,
+      "row": 5,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 8,
+      "row": 5,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 9,
+      "row": 5,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 10,
+      "row": 5,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 11,
+      "row": 5,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 12,
+      "row": 5,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 13,
+      "row": 5,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 14,
+      "row": 5,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 15,
+      "row": 5,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 0,
+      "row": 6,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 1,
+      "row": 6,
+      "terrain": "clear",
+      "elevation": 0,
+      "feature": "wall"
+    },
+    {
+      "col": 2,
+      "row": 6,
+      "terrain": "clear",
+      "elevation": 0,
+      "feature": "wall"
+    },
+    {
+      "col": 3,
+      "row": 6,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 4,
+      "row": 6,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 5,
+      "row": 6,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 6,
+      "row": 6,
+      "terrain": "clear",
+      "elevation": 0,
+      "feature": "wall"
+    },
+    {
+      "col": 7,
+      "row": 6,
+      "terrain": "clear",
+      "elevation": 0,
+      "feature": "wall"
+    },
+    {
+      "col": 8,
+      "row": 6,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 9,
+      "row": 6,
+      "terrain": "water",
+      "elevation": 0
+    },
+    {
+      "col": 10,
+      "row": 6,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 11,
+      "row": 6,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 12,
+      "row": 6,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 13,
+      "row": 6,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 14,
+      "row": 6,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 15,
+      "row": 6,
+      "terrain": "water",
+      "elevation": 0
+    },
+    {
+      "col": 0,
+      "row": 7,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 1,
+      "row": 7,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 2,
+      "row": 7,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 3,
+      "row": 7,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 4,
+      "row": 7,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 5,
+      "row": 7,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 6,
+      "row": 7,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 7,
+      "row": 7,
+      "terrain": "rough",
+      "elevation": 1
+    },
+    {
+      "col": 8,
+      "row": 7,
+      "terrain": "heavyWoods",
+      "elevation": 1
+    },
+    {
+      "col": 9,
+      "row": 7,
+      "terrain": "water",
+      "elevation": 0
+    },
+    {
+      "col": 10,
+      "row": 7,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 11,
+      "row": 7,
+      "terrain": "clear",
+      "elevation": 1,
+      "feature": "wall"
+    },
+    {
+      "col": 12,
+      "row": 7,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 13,
+      "row": 7,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 14,
+      "row": 7,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 15,
+      "row": 7,
+      "terrain": "water",
+      "elevation": 0
+    },
+    {
+      "col": 0,
+      "row": 8,
+      "terrain": "road",
+      "elevation": 0,
+      "skin": "rail"
+    },
+    {
+      "col": 1,
+      "row": 8,
+      "terrain": "road",
+      "elevation": 0,
+      "skin": "rail"
+    },
+    {
+      "col": 2,
+      "row": 8,
+      "terrain": "road",
+      "elevation": 0,
+      "skin": "rail"
+    },
+    {
+      "col": 3,
+      "row": 8,
+      "terrain": "road",
+      "elevation": 0,
+      "skin": "rail"
+    },
+    {
+      "col": 4,
+      "row": 8,
+      "terrain": "road",
+      "elevation": 0,
+      "skin": "rail"
+    },
+    {
+      "col": 5,
+      "row": 8,
+      "terrain": "road",
+      "elevation": 0,
+      "skin": "rail"
+    },
+    {
+      "col": 6,
+      "row": 8,
+      "terrain": "water",
+      "elevation": 0
+    },
+    {
+      "col": 7,
+      "row": 8,
+      "terrain": "road",
+      "elevation": 1,
+      "skin": "rail"
+    },
+    {
+      "col": 8,
+      "row": 8,
+      "terrain": "road",
+      "elevation": 1,
+      "skin": "rail"
+    },
+    {
+      "col": 9,
+      "row": 8,
+      "terrain": "water",
+      "elevation": 0
+    },
+    {
+      "col": 10,
+      "row": 8,
+      "terrain": "road",
+      "elevation": 0,
+      "skin": "rail"
+    },
+    {
+      "col": 11,
+      "row": 8,
+      "terrain": "road",
+      "elevation": 0,
+      "skin": "rail"
+    },
+    {
+      "col": 12,
+      "row": 8,
+      "terrain": "road",
+      "elevation": 0,
+      "skin": "rail"
+    },
+    {
+      "col": 13,
+      "row": 8,
+      "terrain": "road",
+      "elevation": 0,
+      "skin": "rail"
+    },
+    {
+      "col": 14,
+      "row": 8,
+      "terrain": "road",
+      "elevation": 0,
+      "skin": "rail"
+    },
+    {
+      "col": 15,
+      "row": 8,
+      "terrain": "road",
+      "elevation": 0,
+      "skin": "rail"
+    },
+    {
+      "col": 0,
+      "row": 9,
+      "terrain": "water",
+      "elevation": 0
+    },
+    {
+      "col": 1,
+      "row": 9,
+      "terrain": "clear",
+      "elevation": 0,
+      "feature": "wall"
+    },
+    {
+      "col": 2,
+      "row": 9,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 3,
+      "row": 9,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 4,
+      "row": 9,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 5,
+      "row": 9,
+      "terrain": "clear",
+      "elevation": 1,
+      "feature": "wall"
+    },
+    {
+      "col": 6,
+      "row": 9,
+      "terrain": "water",
+      "elevation": 0
+    },
+    {
+      "col": 7,
+      "row": 9,
+      "terrain": "heavyWoods",
+      "elevation": 1
+    },
+    {
+      "col": 8,
+      "row": 9,
+      "terrain": "rough",
+      "elevation": 1,
+      "feature": "wall"
+    },
+    {
+      "col": 9,
+      "row": 9,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 10,
+      "row": 9,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 11,
+      "row": 9,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 12,
+      "row": 9,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 13,
+      "row": 9,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 14,
+      "row": 9,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 15,
+      "row": 9,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 0,
+      "row": 10,
+      "terrain": "water",
+      "elevation": 0
+    },
+    {
+      "col": 1,
+      "row": 10,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 2,
+      "row": 10,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 3,
+      "row": 10,
+      "terrain": "clear",
+      "elevation": 1,
+      "feature": "wall"
+    },
+    {
+      "col": 4,
+      "row": 10,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 5,
+      "row": 10,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 6,
+      "row": 10,
+      "terrain": "water",
+      "elevation": 0
+    },
+    {
+      "col": 7,
+      "row": 10,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 8,
+      "row": 10,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 9,
+      "row": 10,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 10,
+      "row": 10,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 11,
+      "row": 10,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 12,
+      "row": 10,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 13,
+      "row": 10,
+      "terrain": "clear",
+      "elevation": 0,
+      "feature": "wall"
+    },
+    {
+      "col": 14,
+      "row": 10,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 15,
+      "row": 10,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 0,
+      "row": 11,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 1,
+      "row": 11,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 2,
+      "row": 11,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 3,
+      "row": 11,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 4,
+      "row": 11,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 5,
+      "row": 11,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 6,
+      "row": 11,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 7,
+      "row": 11,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 8,
+      "row": 11,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 9,
+      "row": 11,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 10,
+      "row": 11,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 11,
+      "row": 11,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 12,
+      "row": 11,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 13,
+      "row": 11,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 14,
+      "row": 11,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 15,
+      "row": 11,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 0,
+      "row": 12,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 1,
+      "row": 12,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 2,
+      "row": 12,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 3,
+      "row": 12,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 4,
+      "row": 12,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 5,
+      "row": 12,
+      "terrain": "clear",
+      "elevation": 0,
+      "feature": "wall"
+    },
+    {
+      "col": 6,
+      "row": 12,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 7,
+      "row": 12,
+      "terrain": "clear",
+      "elevation": 1,
+      "feature": "wall"
+    },
+    {
+      "col": 8,
+      "row": 12,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 9,
+      "row": 12,
+      "terrain": "clear",
+      "elevation": 0,
+      "feature": "wall"
+    },
+    {
+      "col": 10,
+      "row": 12,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 11,
+      "row": 12,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 12,
+      "row": 12,
+      "terrain": "rough",
+      "elevation": 2
+    },
+    {
+      "col": 13,
+      "row": 12,
+      "terrain": "rough",
+      "elevation": 1
+    },
+    {
+      "col": 14,
+      "row": 12,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 15,
+      "row": 12,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 0,
+      "row": 13,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 1,
+      "row": 13,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 2,
+      "row": 13,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 3,
+      "row": 13,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 4,
+      "row": 13,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 5,
+      "row": 13,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 6,
+      "row": 13,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 7,
+      "row": 13,
+      "terrain": "clear",
+      "elevation": 1,
+      "feature": "wall"
+    },
+    {
+      "col": 8,
+      "row": 13,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 9,
+      "row": 13,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 10,
+      "row": 13,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 11,
+      "row": 13,
+      "terrain": "rough",
+      "elevation": 1,
+      "feature": "wall"
+    },
+    {
+      "col": 12,
+      "row": 13,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 13,
+      "row": 13,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 14,
+      "row": 13,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 15,
+      "row": 13,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 0,
+      "row": 14,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 1,
+      "row": 14,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 2,
+      "row": 14,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 3,
+      "row": 14,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 4,
+      "row": 14,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 5,
+      "row": 14,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 6,
+      "row": 14,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 7,
+      "row": 14,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 8,
+      "row": 14,
+      "terrain": "clear",
+      "elevation": 1,
+      "feature": "wall"
+    },
+    {
+      "col": 9,
+      "row": 14,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 10,
+      "row": 14,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 11,
+      "row": 14,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 12,
+      "row": 14,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 13,
+      "row": 14,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 14,
+      "row": 14,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 15,
+      "row": 14,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 0,
+      "row": 15,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 1,
+      "row": 15,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 2,
+      "row": 15,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 3,
+      "row": 15,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 4,
+      "row": 15,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 5,
+      "row": 15,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 6,
+      "row": 15,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 7,
+      "row": 15,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 8,
+      "row": 15,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 9,
+      "row": 15,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 10,
+      "row": 15,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 11,
+      "row": 15,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 12,
+      "row": 15,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 13,
+      "row": 15,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 14,
+      "row": 15,
+      "terrain": "clear",
+      "elevation": 1,
+      "feature": "wall"
+    },
+    {
+      "col": 15,
+      "row": 15,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 0,
+      "row": 16,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 1,
+      "row": 16,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 2,
+      "row": 16,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 3,
+      "row": 16,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 4,
+      "row": 16,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 5,
+      "row": 16,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 6,
+      "row": 16,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 7,
+      "row": 16,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 8,
+      "row": 16,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 9,
+      "row": 16,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 10,
+      "row": 16,
+      "terrain": "road",
+      "elevation": 0
+    },
+    {
+      "col": 11,
+      "row": 16,
+      "terrain": "clear",
+      "elevation": 0
+    },
+    {
+      "col": 12,
+      "row": 16,
+      "terrain": "clear",
+      "elevation": 1
+    },
+    {
+      "col": 13,
+      "row": 16,
+      "terrain": "road",
+      "elevation": 1
+    },
+    {
+      "col": 14,
+      "row": 16,
+      "terrain": "clear",
+      "elevation": 1,
+      "feature": "wall"
+    },
+    {
+      "col": 15,
+      "row": 16,
+      "terrain": "clear",
+      "elevation": 1
+    }
+  ],
+  "buildings": [
+    {
+      "id": "e0ca87a0-ffb3-46a7-95c6-c8905c29f99f",
+      "type": "bridge",
+      "anchor": {
+        "col": 6,
+        "row": 8
+      },
+      "rotation": 0,
+      "state": "intact"
+    },
+    {
+      "id": "254d1366-bc57-4896-8c62-73e864ce1596",
+      "type": "bridge",
+      "anchor": {
+        "col": 9,
+        "row": 8
+      },
+      "rotation": 0,
+      "state": "intact"
+    },
+    {
+      "id": "3f18de3f-5c9a-4889-a23a-ac256c908905",
+      "type": "starLeagueBunker",
+      "anchor": {
+        "col": 6,
+        "row": 0
+      },
+      "rotation": 0,
+      "state": "intact"
+    },
+    {
+      "id": "803313ed-37bd-40b4-b6ff-1ab09020d25d",
+      "type": "vehicleGarage",
+      "anchor": {
+        "col": 2,
+        "row": 3
+      },
+      "rotation": 1,
+      "state": "intact"
+    },
+    {
+      "id": "96eeedc7-b0e9-4df6-a0db-737043c27587",
+      "type": "castleBrian",
+      "anchor": {
+        "col": 8,
+        "row": 3
+      },
+      "rotation": 0,
+      "state": "intact"
+    },
+    {
+      "id": "1885d983-e93a-422b-b241-93bd595d248d",
+      "type": "commandHQ",
+      "anchor": {
+        "col": 6,
+        "row": 4
+      },
+      "rotation": 5,
+      "state": "intact"
+    },
+    {
+      "id": "90610706-69a2-4aee-8914-c6817e187a0c",
+      "type": "fuelDepot",
+      "anchor": {
+        "col": 12,
+        "row": 4
+      },
+      "rotation": 0,
+      "state": "intact"
+    },
+    {
+      "id": "500854bf-6bf4-457d-8a17-a0ce5daa689d",
+      "type": "fuelDepot",
+      "anchor": {
+        "col": 4,
+        "row": 6
+      },
+      "rotation": 4,
+      "state": "intact"
+    },
+    {
+      "id": "2498ab7b-ffa1-4185-9e39-075452bb2fff",
+      "type": "fuelDepot",
+      "anchor": {
+        "col": 11,
+        "row": 6
+      },
+      "rotation": 3,
+      "state": "intact"
+    },
+    {
+      "id": "a9bf985b-c964-468b-b489-f9ce32fcc2f6",
+      "type": "repairBay",
+      "anchor": {
+        "col": 11,
+        "row": 9
+      },
+      "rotation": 3,
+      "state": "intact"
+    },
+    {
+      "id": "db4cf8b5-59e7-42c4-add1-08e830eba322",
+      "type": "mechHangar",
+      "anchor": {
+        "col": 10,
+        "row": 12
+      },
+      "rotation": 1,
+      "state": "intact"
+    },
+    {
+      "id": "ed5aaa83-79e6-4549-a3b7-9f75f9d8c23a",
+      "type": "barracks",
+      "anchor": {
+        "col": 1,
+        "row": 0
+      },
+      "rotation": 4,
+      "state": "intact"
+    }
+  ],
+  "annotations": [],
+  "updatedAt": "2026-08-14T18:20:19.185Z"
+}
